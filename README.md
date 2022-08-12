@@ -10,4 +10,4 @@ arg[1] output file path
 
 
 # Other Assumptions #
-input file can contains multiple sentences seperated with new line ("\n")
+input file can contain multiple sentences seperated with new line ("\n")
