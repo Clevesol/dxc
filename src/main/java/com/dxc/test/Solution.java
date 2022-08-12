@@ -25,7 +25,7 @@ public class Solution {
     @Autowired
     private UtilComponent utilComponent;
 
-    private static Logger logger = LoggerFactory.getLogger(TestApplication.class);
+    private static Logger logger = LoggerFactory.getLogger(Solution.class);
 
     public void  processAndOutput(String... args) throws IOException {
         String inputFilePath = args.length == 2 ? args[0] : "input.txt";
@@ -74,11 +74,15 @@ public class Solution {
         List<OutputWrapper> outputWrapperList = new ArrayList<>();
 
         sentences.stream().forEach( senetence -> {
+
+
+
             senetence.stream().forEach(wordElement -> {
                 String word = wordElement.toString();
                 int wordLength = word.length();
+                double vowelsCount = this.utilComponent.getVowelsCount(word);
                 Character[] vowels = this.utilComponent.getVowels(word);
-                double vowelAverage = wordLength/vowels.length;
+                double vowelAverage = vowelsCount/wordLength;
                 outputWrapperList.add(new OutputWrapper(vowels,wordLength,vowelAverage,word));
             });
         });
