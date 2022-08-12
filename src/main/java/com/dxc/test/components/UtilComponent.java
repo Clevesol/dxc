@@ -1,4 +1,4 @@
-package com.dxc.test;
+package com.dxc.test.components;
 
 import org.springframework.stereotype.Component;
 

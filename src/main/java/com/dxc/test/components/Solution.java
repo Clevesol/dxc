@@ -1,4 +1,4 @@
-package com.dxc.test;
+package com.dxc.test.components;
 
 import com.dxc.test.data.OutputWrapper;
 import com.dxc.test.data.Word;
